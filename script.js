@@ -12,3 +12,17 @@ function getComputerChoice(){
 }
 
 
+//Prompt the userfor their answer
+function getHumanChoice() {
+    let choice = prompt("Rock Paper Scissors Go!:").toLowerCase();
+    
+    // Validate the input to ensure it's one of the valid choices
+    if (choice === "rock" || choice === "paper" || choice === "scissors") {
+        return choice;
+    } else {
+        console.log("Invalid choice. Please enter 'rock', 'paper', or 'scissors'.");
+        return getHumanChoice(); // Keep asking for a valid input
+    }
+}
+
+
