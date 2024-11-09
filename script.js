@@ -25,4 +25,49 @@ function getHumanChoice() {
     }
 }
 
+let humanScore = 0;
+let computerScore = 0;
+
+
+function playRound(){
+    const computerChoice = getComputerChoice();
+    const humanChoice = getHumanChoice();
+    // paper beats rock
+    // rock beats scissors
+    // scissors beats paper
+    if (computerChoice === "rock" && humanChoice === "paper"){
+        humanScore++;
+        return console.log("You win! Paper beats Rock!")
+    }
+    else if (computerChoice === "rock" && humanChoice === "scissors"){
+        computerScore++;
+        return console.log("You lose... Rock beats Scissors!")
+    }
+    else if (computerChoice === "paper" && humanChoice === "rock"){
+        computerScore++;
+        return console.log("You lose... Paper beats Rock!")
+    }
+    else if (computerChoice === "paper" && humanChoice === "scissors"){
+        humanScore++;
+        return console.log("You win! Scissors beats Paper!")
+    }
+    else if (computerChoice === "scissors" && humanChoice === "paper"){
+        computerScore++;
+        return console.log("You lose... Scissors beats Paper!")
+    }
+    else if (computerChoice === "scissors" && humanChoice === "rock"){
+        humanScore++;
+        return console.log("You win! Rock beats Scissors!")
+    }
+    else {
+        return console.log("It's a tie!")
+    }
+
+
+
+
+
+
+    
+}
 
